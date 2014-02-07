@@ -1,0 +1,24 @@
+img {
+    width: 100%;
+    height: auto;
+}
+
+.image {
+    position: relative;
+}
+
+.image--fullsize {
+    background-size: cover;
+}
+
+.image__title {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    font-size: $mega-size;
+}
+
+.image__title--negative {
+    color: $font-color-negative;
+}

@@ -1,0 +1,15 @@
+.tmp/*
+!.tmp/dist
+app
+docs
+grunt
+node_modules
+test
+.bowerrc
+.editorconfig
+.gitattributes
+.gitignore
+.jsbeautifyrc
+.jshintrc
+bower.json
+Gruntfile.js

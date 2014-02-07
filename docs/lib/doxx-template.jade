@@ -1,0 +1,274 @@
+- // Javascript vars
+- var path = locals.name.replace('.js', '');
+- var require = 'app/' + path;
+- var filename = path.replace(/^.*[\\\/]/, ''); // After last /
+- var header = filename.replace(/-/g, ' '); // Replace - with spaces
+- var header = header.charAt(0).toUpperCase() + header.slice(1); // Uppercase for char
+- var varName = filename.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); }); // hyphen to camelCase
+
+- // Convert params to comma seperated string
+- var getParams = function(symbol) {
+-   var paramsString = '';
+-   var i, max, tag, tagName;
+-   for (i=0, max=symbol.tags.length; i<max; i++) {
+-     tag = symbol.tags[i];
+-     if (tag.type === 'param') {
+-       tagName = tag.name;
+-       // Only include first level params
+-       if (tagName.indexOf('.') === -1) {
+-         paramsString += tagName + ', ';
+-       }
+-     }
+-   }
+-   paramsString = paramsString.replace(/,\s*$/, '');
+-   return paramsString;
+- };
+
+- // Convert param tag to html
+- var getParamOutput = function(tag) {
+-   var paramOutput = '<span class="code">' + tag.name + '</span> <em>(' + tag.types + ')</em>'
+-   if (tag.description) {
+-     paramOutput += ': ' + wrapCodeForTicks(tag.description);
+-   }
+-   return paramOutput;
+- }
+
+- var getReturnOutput = function(tag) {
+-   var returnText = '<em>(' + tag.types + ')</em>'
+-   if (tag.description) {
+-     returnText += ': ' + wrapCodeForTicks(tag.description)
+-   }
+-   return returnText;
+- };
+
+- // Checks if symbol is exported/global
+- var isExport = function(symbol) {
+-   for (i=0, max=symbol.tags.length; i<max; i++) {
+-     tag = symbol.tags[i];
+-     if (tag.type === 'exports') {
+-       return true;
+-     }
+-   }
+-   return false;
+- };
+
+- var beginsWithHeader = function(text) {
+-   return (text.indexOf('<h4>') === 0);
+- };
+
+- // Create header for symbol
+- var getHeader = function(symbol, showParams) {
+-   var symbolHeader = symbol.ctx.name;
+-   if (symbolHeader === 'exports') {
+-     symbolHeader = varName;
+-   } else if (isExport(symbol)) {
+-     symbolHeader = varName + '.' + symbolHeader;
+-   }
+-   // Include params in header is function
+-   if (symbol.ctx.type === 'method' || symbol.ctx.type === 'function') {
+-     symbolHeader += '(';
+-     if (showParams) {
+-       symbolHeader += getParams(symbol);
+-     }
+-     symbolHeader += ')';
+-   }
+-   return symbolHeader;
+- };
+
+- var removeLineBreaks = function(text) {
+-   return text.split('<br />').join(' ');
+- };
+
+- var addJsCode = function(text) {
+-   return text.split('<pre>').join('<pre class="js">');
+- }
+
+- var transformHeaders = function(text) {
+-   var headers = 'h1 h2 h3'.split(' ');
+-   var i, max, header;
+-   for (i=0, max=headers.length; i<max; i++) {
+-     header = headers[i];
+-     text = text.split('<' + header).join('<h4').split('</' + header).join('</h4');
+-   }
+-   return text;
+- };
+
+- var convertDescription = function(text) {
+-   return removeLineBreaks(addJsCode(transformHeaders(text)));
+- };
+
+- var wrapCodeForTicks = function(text) {
+-   return text.replace(/`([^`]*)`/g, '<code>$1</code>');
+- };
+
+- var wrapCodeHighlighSpan = function(text, finds, modifier) {
+-   for (var i = 0, max = finds.length; i < max; i++) {
+-     text = text.split(finds[i]).join('<span class="highlight--' + modifier + '">' + finds[i] + '</span>');
+-   }
+-   return text;
+- };
+
+- var wrapCodeHighlighSpanForModule = function(text, modifier) {
+-   text = text.split(varName + '(').join('<span class="highlight--' + modifier + '">' + varName + '</span>(');
+-   text = text.split(varName + '.').join('<span class="highlight--' + modifier + '">' + varName + '</span>.');
+-   return text;
+- };
+
+- var wrapCodeHighlighSpanForStrings = function(text, modifier) {
+-   return text.replace(/'([^']*)'/g, '<span class="highlight--' + modifier + '">\'$1\'</span>');
+- };
+
+- var wrapCodeHighlighSpanForFunctions = function(text, modifier) {
+-   var paramIndex = text.indexOf('(');
+-   if (paramIndex === -1) {
+-     return text;
+-   }
+-   text = text.replace('(', '</span>(');
+-   var seperatorIndex = text.indexOf('.');
+-   if (seperatorIndex !== -1 && seperatorIndex < paramIndex) {
+-     text = text.replace('.', '.<span class="highlight--' + modifier + '">');
+-   } else {
+-     text = '<span class="highlight--' + modifier + '">' + text;
+-   }
+-   return text
+- };
+
+- var addCodeHighligtTags = function(text) {
+-   text = wrapCodeHighlighSpanForFunctions(text, 'function');
+-   text = wrapCodeHighlighSpanForModule(text, 'module');
+-   text = wrapCodeHighlighSpan(text, ['(', ')', '[', ']'], 'block');
+-   text = wrapCodeHighlighSpan(text, [1,2,3,4,5,6,7,8,9,0], 'number');
+-   text = wrapCodeHighlighSpan(text, ['true', 'false'], 'boolean');
+-   text = wrapCodeHighlighSpanForStrings(text, 'string');
+-   return text;
+- };
+
+mixin parseObject(obj)
+  ul
+    each val, key in obj
+      li
+        span #{key}:
+          if typeof val === 'string'
+            span #{val}
+          else if typeof val === 'object'
+            mixin parseObject(val)
+
+mixin dropDown(subFolder, subFiles)
+  if subFolder != '' && subFiles.length > 0
+    li.dropdown
+      a.dropdown-toggle(href="#",data-toggle="dropdown",unselectable="on") #{subFolder}&nbsp;
+        b.caret
+      ul.dropdown-menu
+        each subFile in subFiles
+          li: a(href="#{subFile.rel}") #{subFile.file}
+
+mixin labelForSymbolType(symbol)
+  span(class=["label", "label-info", "radius", "ctx-type"])= symbol.ctx.type
+  span= ' '
+
+mixin labelForTag(tag)
+  span(class=["label", "label-success", "radius", "ctx-type"])= tag.type
+  span= ' '
+
+!!!5
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  title Javascript documentation
+  meta(name='description', content='Javascript documentation')
+  meta(name='viewport', content='width=device-width,initial-scale=1')
+  link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/css/bootstrap-docs.css')
+  link(rel='stylesheet', href='/highlightjs/styles/obsidian.css')
+  link(rel='stylesheet', href='/css/jvdamgaard-theme.css')
+
+body
+  .container.bs-docs-container
+    .row
+      .col-md-3
+        .bs-sidebar.hidden-print.affix(role='complementary', id='sub-nav')
+          ul.nav.bs-sidenav
+            - var lastFolder
+            each path in files
+              - path.name = path.name.replace(/\\/g, '/');
+              - var folder = path.name.substring(0,path.name.indexOf('/'))
+              - var file = path.name.substring(path.name.indexOf('/')+1).replace('.js', '')
+
+              if lastFolder != folder
+                li.folder= folder
+                - lastFolder = folder
+              li.file
+                a(href="/#{path.relName}")= file
+              - if (locals.name == path.name)
+                each symbol in dox
+                  if symbol.ctx.name
+                    - var klass = '';
+                    - if (!isExport(symbol)) klass = 'is-private hidden';
+                    li(class=klass)
+                      a(href='##{symbol.ctx.name}')!= addCodeHighligtTags(getHeader(symbol))
+      .col-md-9(role='main')
+        if locals.readme
+          .bs-docs-section!= removeLineBreaks(readme)
+        else
+          .bs-docs-section
+            h1 #{header}
+              button(type='button', class='btn btn-default', id='show-private') show private
+            pre.language-javascript
+              code var #{varName} = require('#{require}');
+
+            each symbol in dox
+              - var wasExport = false;
+              //- mixin parseObject(symbol)
+
+              //- Symbols not attached to a var of function: Descriptions and
+              //- callback functions
+              if !symbol.ctx.name
+
+                //- Callback methods used after functions
+                if symbol.tags.length > 0 && symbol.tags[0].type == 'callback'
+                  - var klass = 'code-block code-block--callback';
+                  - if (!wasExport) klass += ' is-private hidden';
+                  section(class=klass)
+                    h4.code= symbol.tags[0].string + ' = function(' + getParams(symbol) + ')'
+                    em!= convertDescription(symbol.description.full)
+                    ol
+                      each tag in symbol.tags
+                        if tag.type == 'param'
+                          li!= getParamOutput(tag)
+
+                else //- Description
+                  .description!= convertDescription(symbol.description.full)
+
+              else //- Symbols attached to a method or var
+                - var klass = 'code-block';
+                - wasExport = isExport(symbol);
+                - if (!wasExport) klass += ' is-private hidden';
+                section(id=symbol.ctx.name, class=klass)
+                  h2.code(id='#{symbol.ctx.name}')!= addCodeHighligtTags(getHeader(symbol, true))
+                  .description!= convertDescription(symbol.description.summary)
+                  if symbol.hasParams
+                    h4 Arguments
+                    ol
+                      each tag in symbol.tags
+                        if tag.type == 'param'
+                          li!= getParamOutput(tag)
+
+                  if symbol.return
+                    each tag in symbol.tags
+                      if tag.type === 'return'
+                        if tag.types[0] !== 'void'
+                          h4 Returns
+                          p!= getReturnOutput(tag)
+                  - body = symbol.description.body
+                  if body
+                    - body = convertDescription(body);
+                    if !beginsWithHeader(body)
+                      - body = '<h4>Description</h4>' + body
+                    div!= body
+
+  script(src='/jquery/jquery.js')
+  script(src='/bootstrap/dist/js/bootstrap.js')
+  script(src='/highlightjs/highlight.pack.js')
+  script(src='/js/show-private.js')
+  script.
+    hljs.initHighlightingOnLoad()

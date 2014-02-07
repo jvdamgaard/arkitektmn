@@ -1,0 +1,133 @@
+/*
+# Grids
+
+Fluid and nestable grid system, e.g.:
+
+	<style>
+		.demo {
+			background: #272822;
+			padding: 1em;
+			color: #fff;
+		}
+	</style>
+
+	<div class="grid">
+
+		<div class="grid__item  one-third">
+			<p class="demo">One third grid</p>
+		</div><!--
+
+	 --><div class="grid__item  two-thirds">
+			<p class="demo">Two thirds grid</p>
+		</div><!--
+
+	 --><div class="grid__item  one-whole">
+			<p class="demo">One whole grid</p>
+		</div><!--
+
+	 --><div class="grid__item  one-quarter">
+			<p class="demo">One quarter grid</p>
+		</div><!--
+
+	 --><div class="grid__item  three-quarters">
+
+	 		<p class="demo">Three quarters grid</p>
+
+			<div class="grid">
+
+				<div class="grid__item one-half">
+					<p class="demo">One half nested grid</p>
+				</div><!--
+
+	         --><div class="grid__item one-half">
+					<p class="demo">One half nested grid</p>
+				</div>
+
+			</div
+		</div>
+	</div>
+
+Note: `grid__item` dom elements can not have spaces between because the grid
+system uses `inline-block`
+
+Use html comments `<!--` `-->` if indention is required.
+
+Grid demo: [jsfiddle.net/inuitcss/CLYUC](http://jsfiddle.net/inuitcss/CLYUC)
+
+## Widths
+
+`.one-whole`
+
+### Halves
+
+`.one-half`
+
+### Thirds
+
+`.one-third`, `.two-thirds`
+
+### Quarters
+
+`.one-quarter`, `.two-quarters`, `.three-quarters`
+
+### Fifths
+
+`.one-fifth`, `.two-fifths`, `.three-fifths`, `.four-fifths`
+
+### Sixths
+
+`.one-sixth`, `.two-sixths`, `.three-sixths`, `.four-sixths`, `.five-sixths`
+
+### Eighths
+
+`.one-eighth`, `.two-eighths`, `.three-eighths`, `.four-eighths`,
+`.five-eighths`, `.six-eighths`, `.seven-eighths`
+
+### Tenths
+
+`.one-tenth`, `.two-tenths`, `.three-tenths`, `.four-tenths`, `.five-tenths`,
+`.six-tenths`, `.seven-tenths`, `.eight-tenths`, `.nine-tenths`
+
+### Twelfths
+
+`.one-twelfth`, `.two-twelfths`, `.three-twelfths`, `.four-twelfths`,
+`.five-twelfths`, `.six-twelfths`, `.seven-twelfths`, `.eight-twelfths`,
+`.nine-twelfths`, `.ten-twelfths`, `.eleven-twelfths`
+
+## Responsive
+
+All width can be prefixed with `palm-`. `lap-`, `lap-and-up-`, `portable-`,
+`desk-` or `desk-wide-`
+
+	<style>
+		.demo {
+			background: #272822;
+			padding: 1em;
+			color: #fff;
+		}
+	</style>
+
+	<div class="grid">
+		<div class="grid__item one-whole">
+			<p class="demo">1:1</p>
+		</div><!--
+
+	 --><div class="grid__item one-whole lap-one-third">
+	 		<p class="demo">1:1, lap 1:3</p>
+	 	</div><!--
+
+	 --><div class="grid__item one-half lap-one-third">
+	 		<p class="demo">1:2, lap 1:3</p>
+	 	</div><!--
+
+	 --><div class="grid__item one-half lap-one-third">
+	 		<p class="demo">1:2, lap 1:3</p>
+	 	</div>
+	</div>
+
+*/
+
+.grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
