@@ -1,0 +1,10 @@
+deploy:
+  provider: s3
+  access_key_id: AKIAJ3MROIPIGKQSZUYQ
+  secret_access_key:
+    secure: LnoYxgZM5MFm1NcIHtQmaF7zBvzwzZlkhTJX1a6JReFTUgviAR7bdpEK+ZeFVQB1AqdSFu5CbwCf/vSqX2JRW5B+njXrMPkpGa/jYLklggmmfGJrjQBnk6ucRzBVwj867svZvZfFXAoc/3mCqow/0g2K1kbnllxbBO4n4nnLhd4=
+  bucket: arkitektmn
+  local-dir: app
+  on:
+    repo: jvdamgaard/arkitektmn
+    branch: master
