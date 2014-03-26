@@ -1,0 +1,19 @@
+{
+  "name": "arkitektmn",
+  "version": "0.0.0",
+  "description": "Arkitekttegnestuen Merete Nielsen website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvdamgaard/arkitektmn.git"
+  },
+  "author": "Jakob Viskum Damgaard <jakob.viskum.damgaardgmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvdamgaard/arkitektmn/issues"
+  },
+  "homepage": "https://github.com/jvdamgaard/arkitektmn"
+}
