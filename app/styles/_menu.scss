@@ -1,0 +1,32 @@
+/* Menu */
+.menu {
+    position: fixed;
+    top: 20%;
+    left: 0;
+}
+.menu ul {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+}
+.menu li {
+    list-style: none;
+}
+.menu a {
+    text-transform: uppercase;
+}
+.menu__background {
+    top: -20%;
+    left: -25%;
+    height: 130%;
+    width: 110%;
+    transform: rotate(35deg);
+}
+.menu:hover .menu__background {
+    background: rgba(255,255,255,0.85);
+}
+@media all and (max-width: 400px) {
+    .menu {
+        top: 40%;
+    }
+}

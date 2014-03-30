@@ -1,0 +1,13 @@
+/* Elements */
+.background {
+    position: absolute;
+    background: rgba(255,255,255,0.65);
+    z-index: -1;
+    transition: background-color .25s ease-in-out;
+}
+.highlight {
+    font-weight: 600;
+}
+.no-load {
+    background-image: none !important;
+}

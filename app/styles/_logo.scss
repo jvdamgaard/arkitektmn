@@ -1,0 +1,23 @@
+/* Logo */
+.logo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    text-align: right;
+}
+.logo__text {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.logo__background {
+    width: 120%;
+    height: 130%;
+    top: -20%;
+    left: 0;
+    transform: rotate(-15deg);
+}
+.logo:hover .logo__background {
+    background: rgba(255,255,255,0.85);
+}

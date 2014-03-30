@@ -1,0 +1,28 @@
+/* E-mail */
+.email {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    display: block;
+    padding: 20px;
+    margin: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.email:hover {
+    background-color: transparent;
+}
+.email__background {
+    position: absolute;
+    z-index: -1;
+    transition: background-color .25s ease-in-out;
+    width: 120%;
+    height: 150%;
+    top: -10%;
+    left: -15%;
+    background-color: rgba(255,236,10,0.85);
+    transform: rotate(-20deg);
+}
+.email:hover .email__background {
+    background-color: rgba(255,236,10,1);
+}

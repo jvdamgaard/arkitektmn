@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "Arkitekttegnestuen Merete Nielsen website",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\""
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jvdamgaard/arkitektmn.git"
@@ -15,5 +12,21 @@
   "bugs": {
     "url": "https://github.com/jvdamgaard/arkitektmn/issues"
   },
-  "homepage": "https://github.com/jvdamgaard/arkitektmn"
+  "homepage": "https://github.com/jvdamgaard/arkitektmn",
+  "devDependencies": {
+    "open": "0.0.4",
+    "gulp-clean": "0.2.4",
+    "gulp-useref": "0.3.0",
+    "gulp-filter": "0.3.1",
+    "gulp-util": "2.2.14",
+    "gulp-uglify": "0.2.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp": "3.6.0",
+    "gulp-connect": "1.0.10",
+    "gulp-csso": "0.2.6",
+    "gulp-sass": "0.7.1",
+    "gulp-load-plugins": "0.4.0",
+    "gulp-concat": "~2.2.0",
+    "gulp-image-resize": "~0.5.0"
+  }
 }
