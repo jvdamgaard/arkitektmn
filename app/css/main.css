@@ -36,6 +36,9 @@ a:hover {
 .highlight {
     font-weight: 600;
 }
+.no-load {
+    background-image: none !important;
+}
 
 /* Logo */
 .logo {
@@ -88,6 +91,11 @@ a:hover {
 .menu:hover .menu__background {
     background: rgba(255,255,255,0.85);
 }
+@media all and (max-width: 400px) {
+    .menu {
+        top: 40%;
+    }
+}
 
 /* E-mail */
 .email {
@@ -126,11 +134,59 @@ a:hover {
 
 /* Frontpage */
 .frontpage--slide1 {
-    background-image: url(/img/frontpage/slide1.jpg);
+    background-image: url(/img/frontpage/slide1-400x267.jpg);
 }
 .frontpage--slide2 {
-    background-image: url(/img/frontpage/slide2.jpg);
+    background-image: url(/img/frontpage/slide2-400x267.jpg);
 }
 .frontpage--slide3 {
-    background-image: url(/img/frontpage/slide3.jpg);
+    background-image: url(/img/frontpage/slide3-400x267.jpg);
+}
+
+@media all and (min-width: 600px), all and (min-height: 401px) {
+    .frontpage--slide1 {
+        background-image: url(/img/frontpage/slide1-600x401.jpg);
+    }
+    .frontpage--slide2 {
+        background-image: url(/img/frontpage/slide2-600x401.jpg);
+    }
+    .frontpage--slide3 {
+        background-image: url(/img/frontpage/slide3-600x401.jpg);
+    }
+}
+
+@media all and (min-width: 800px), all and (min-height: 534px) {
+    .frontpage--slide1 {
+        background-image: url(/img/frontpage/slide1-800x534.jpg);
+    }
+    .frontpage--slide2 {
+        background-image: url(/img/frontpage/slide2-800x534.jpg);
+    }
+    .frontpage--slide3 {
+        background-image: url(/img/frontpage/slide3-800x534.jpg);
+    }
+}
+
+@media all and (min-width: 1000px), all and (min-height: 667px) {
+    .frontpage--slide1 {
+        background-image: url(/img/frontpage/slide1-1000x667.jpg);
+    }
+    .frontpage--slide2 {
+        background-image: url(/img/frontpage/slide2-1000x667.jpg);
+    }
+    .frontpage--slide3 {
+        background-image: url(/img/frontpage/slide3-1000x667.jpg);
+    }
+}
+
+@media all and (min-width: 1200px), all and (min-height: 800px) {
+    .frontpage--slide1 {
+        background-image: url(/img/frontpage/slide1-1200x800.jpg);
+    }
+    .frontpage--slide2 {
+        background-image: url(/img/frontpage/slide2-1200x800.jpg);
+    }
+    .frontpage--slide3 {
+        background-image: url(/img/frontpage/slide3-1200x800.jpg);
+    }
 }
