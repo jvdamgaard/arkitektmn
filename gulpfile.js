@@ -54,9 +54,7 @@ gulp.task('clean', function() {
 });
 
 // Build
-gulp.task('build', ['styles', 'scripts', 'copy'], function() {
-    gulp.start('compress');
-});
+gulp.task('build', ['styles', 'scripts', 'copy']);
 
 // Default
 gulp.task('default', ['clean'], function() {
