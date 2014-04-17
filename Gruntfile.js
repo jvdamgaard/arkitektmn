@@ -54,58 +54,54 @@ module.exports = function(grunt) {
             images: {
                 options: {
                     sizes: [{
-                        name: 'portrait-phone',
+                        name: 'portrait-x-small',
                         width: 320,
                         height: 480,
-                        quality: 80
+                        quality: 85,
+                        aspectRatio: false
                     }, {
-                        name: 'portrait-phone-retina',
-                        width: 640,
-                        height: 1136,
-                        quality: 60
-                    }, {
-                        name: 'portrait-tablet',
+                        name: 'portrait-small',
                         width: 768,
-                        height: 1024,
-                        quality: 80
+                        height: 1136,
+                        quality: 75,
+                        aspectRatio: false
                     }, {
-                        name: 'portrait-tablet-retina',
+                        name: 'portrait-x-large',
                         width: 1536,
                         height: 2048,
-                        quality: 50
+                        quality: 60,
+                        aspectRatio: false
                     }, {
-                        name: 'landscape-phone',
+                        name: 'landscape-x-small',
                         width: 480,
                         height: 320,
-                        quality: 80
+                        quality: 85,
+                        aspectRatio: false
                     }, {
-                        name: 'landscape-phone-retina',
+                        name: 'landscape-small',
                         width: 1136,
-                        height: 640,
-                        quality: 60
-                    }, {
-                        name: 'landscape-tablet',
-                        width: 1024,
                         height: 768,
-                        quality: 80
+                        quality: 75,
+                        aspectRatio: false
                     }, {
-                        name: 'landscape-desktop',
+                        name: 'landscape-medium',
                         width: 1366,
                         height: 1024,
-                        quality: 75
+                        quality: 75,
+                        aspectRatio: false
                     }, {
-                        name: 'landscape-desktop-large',
+                        name: 'landscape-large',
                         width: 1920,
                         height: 1200,
-                        quality: 75
+                        quality: 60,
+                        aspectRatio: false
                     }, {
-                        name: 'landscape-tablet-retina',
+                        name: 'landscape-x-large',
                         width: 2048,
                         height: 1536,
-                        quality: 50
-                    }],
-                    aspectRatio: false,
-                    upscale: true
+                        quality: 60,
+                        aspectRatio: false
+                    }]
                 },
                 files: [{
                     expand: true,

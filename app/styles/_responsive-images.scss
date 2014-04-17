@@ -1,0 +1,124 @@
+@mixin responsive-image-background($image) {
+
+    // Portrait
+
+    background-image: url(/img/#{$image}-portrait-x-small.jpg);
+
+    @media only screen and (min-width: 321px) {
+        background-image: url(/img/#{$image}-portrait-small.jpg);
+    }
+    @media only screen and (min-height: 481px) {
+        background-image: url(/img/#{$image}-portrait-small.jpg);
+    }
+
+    @media only screen and (min-width: 769px) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+    @media only screen and (min-height: 1137px) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+
+    // Portrait retina
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-small.jpg);
+    }
+    @media only screen and (min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-small.jpg);
+    }
+
+    @media only screen and (min-width: 321px) and (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+    @media only screen and (min-width: 321px) and (min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+    @media only screen and (min-height: 481px) and (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+    @media only screen and (min-height: 481px) and (min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-portrait-x-large.jpg);
+    }
+
+    // Landscape
+
+    @media screen and (min-aspect-ratio: 1/1) {
+        background-image: url(/img/#{$image}-landscape-x-small.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (min-width: 481px) {
+        background-image: url(/img/#{$image}-landscape-small.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-height: 320px) {
+        background-image: url(/img/#{$image}-landscape-small.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (min-width: 1137px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-height: 769px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (min-width: 1367px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-height: 1025px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (min-width: 1921px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-height: 1201px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+
+    // Landscape retina
+
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-landscape-small.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) {
+        background-image: url(/img/#{$image}-landscape-small.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 567px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-height: 385px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-width: 567px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-height: 385px) {
+        background-image: url(/img/#{$image}-landscape-medium.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 684px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-height: 513px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-width: 684px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-height: 513px) {
+        background-image: url(/img/#{$image}-landscape-large.jpg);
+    }
+
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 961px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (-webkit-min-device-pixel-ratio: 2) and (min-height: 600px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-width: 961px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+    @media screen and (min-aspect-ratio: 1/1) and (min-device-pixel-ratio: 2) and (min-height: 600px) {
+        background-image: url(/img/#{$image}-landscape-x-large.jpg);
+    }
+}
