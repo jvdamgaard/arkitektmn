@@ -78,7 +78,8 @@ module.exports = function(grunt) {
                         width: 1200,
                         height: 800,
                         quality: 75
-                    }]
+                    }],
+                    aspectRatio: false
                 },
                 files: [{
                     expand: true,
