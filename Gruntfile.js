@@ -54,32 +54,58 @@ module.exports = function(grunt) {
             images: {
                 options: {
                     sizes: [{
-                        name: 'xs',
-                        width: 400,
-                        height: 267,
+                        name: 'portrait-phone',
+                        width: 320,
+                        height: 480,
+                        quality: 80
+                    }, {
+                        name: 'portrait-phone-retina',
+                        width: 640,
+                        height: 1136,
+                        quality: 60
+                    }, {
+                        name: 'portrait-tablet',
+                        width: 768,
+                        height: 1024,
+                        quality: 80
+                    }, {
+                        name: 'portrait-tablet-retina',
+                        width: 1536,
+                        height: 2048,
+                        quality: 50
+                    }, {
+                        name: 'landscape-phone',
+                        width: 480,
+                        height: 320,
+                        quality: 80
+                    }, {
+                        name: 'landscape-phone-retina',
+                        width: 1136,
+                        height: 640,
+                        quality: 60
+                    }, {
+                        name: 'landscape-tablet',
+                        width: 1024,
+                        height: 768,
+                        quality: 80
+                    }, {
+                        name: 'landscape-desktop',
+                        width: 1366,
+                        height: 1024,
                         quality: 75
                     }, {
-                        name: 's',
-                        width: 600,
-                        height: 400,
+                        name: 'landscape-desktop-large',
+                        width: 1920,
+                        height: 1200,
                         quality: 75
                     }, {
-                        name: 'm',
-                        width: 800,
-                        height: 534,
-                        quality: 75
-                    }, {
-                        name: 'l',
-                        width: 1000,
-                        height: 667,
-                        quality: 75
-                    }, {
-                        name: 'xl',
-                        width: 1200,
-                        height: 800,
-                        quality: 75
+                        name: 'landscape-tablet-retina',
+                        width: 2048,
+                        height: 1536,
+                        quality: 50
                     }],
-                    aspectRatio: false
+                    aspectRatio: false,
+                    upscale: true
                 },
                 files: [{
                     expand: true,
@@ -96,10 +122,5 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'responsive_images',
         'imagemin'
-    ]);
-
-    grunt.registerTask('deploy', [
-        'build',
-        's3'
     ]);
 };

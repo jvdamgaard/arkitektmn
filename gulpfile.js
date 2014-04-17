@@ -1,8 +1,8 @@
 var gulp = require('gulp');
-// var open = require('open');
 
 // Load plugins
 var $ = require('gulp-load-plugins')();
+require('gulp-grunt')(gulp);
 
 // Styles
 gulp.task('styles', function() {
@@ -30,23 +30,32 @@ gulp.task('copy', function() {
     return gulp.src([
         'app/**/*.*',
         '!app/js/**/*.*',
-        '!app/styles/**/*.*'
+        '!app/styles/**/*.*',
+        '!app/img/**/*.*'
     ])
         .pipe(gulp.dest('dist'));
 });
 
 // Clean
 gulp.task('clean', function() {
-    return gulp.src('dist', {
+    return gulp.src([
+        'dist',
+        '.tmp'
+    ], {
         read: false
     })
         .pipe($.clean());
 });
 
 // Build
-gulp.task('build', ['styles', 'scripts', 'copy']);
+gulp.task('build', ['styles', 'scripts', 'copy', 'grunt-build']);
 
-// Default
-gulp.task('default', ['clean'], function() {
+// Clean and build
+gulp.task('rebuild', ['clean'], function() {
     gulp.start('build');
+});
+
+// Clean, build and deploy
+gulp.task('deploy', ['rebuild'], function() {
+    gulp.start('grunt-s3');
 });
