@@ -1,16 +1,31 @@
+var fs = require('fs');
+
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
+
+    // AWS S3
+    var accessKeyId = process.env.AWS_S3_ACCESS_KEY_ID;
+    var secretAccessKey = process.env.AWS_S3_ACCESS_KEY_ID;
+
+    // Find local aws s3 deploy keys
+    var homePath = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
+    var awsConfigPath = homePath + '/Dropbox/Dokumenter/Hjemmesider/aws-s3-keys/arkitektmn.json';
+    if (fs.existsSync(awsConfigPath)) {
+        var awsConfig = require(awsConfigPath);
+        accessKeyId = awsConfig.accessKeyId;
+        secretAccessKey = awsConfig.secretAccessKey;
+    }
+
     var config = {
         app: {
             source: 'app',
             dist: 'dist'
         },
         pkg: require('./package.json'),
-        aws: grunt.file.readJSON('./grunt-aws.json'),
         s3: {
             options: {
-                accessKeyId: '<%= aws.accessKeyId %>',
-                secretAccessKey: '<%= aws.secretAccessKey %>',
+                accessKeyId: accessKeyId,
+                secretAccessKey: secretAccessKey,
                 bucket: 'arkitektmn',
                 headers: {
                     CacheControl: new Date().getTime() + 1000 * 60 * 60 * 24,
@@ -80,5 +95,10 @@ module.exports = function(grunt) {
     grunt.registerTask('build', [
         'responsive_images',
         'imagemin'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        's3'
     ]);
 };

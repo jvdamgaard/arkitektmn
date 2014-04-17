@@ -2,7 +2,9 @@ language: node_js
 node_js:
   - 0.10
 env:
-  - NODE_ENV=build
+  global:
+    - secure: "osMEzHPKIQab+xMiSI6Depjj4k3uvjnrpb6RcuN4zDAC+wrL4DG0yD+VeD1gBXTEXb9yC/IK3dehxoo2B9HQ5Q5FbCBRjrMV7exanxlCFPptHEppYqLelkY536LscmLF4B7LSjJUR+zPqVwguzZWAcnhR/HQtM/Iwbly/q9p/zQ="
+    - secure: "DaXDYCewdEBdmBBHA+8+df6121cY2D9Xzu93Z8VgiSrbtKXe8ytWUwOyW7Y/87TTKOC5UrM3bue7FOdO3ILlFDIvPbC94PoHde4OU0UIk1Bpo/hLyay7HKlZsb+v6wf7qmRaVr6+tLPbh7/QrFZw4i+xg/oCBg2Df6AajXQHnPU="
 cache:
   directories:
     - node_modules
