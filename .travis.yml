@@ -7,21 +7,7 @@ cache:
   directories:
     - node_modules
 before_install:
-  - npm install -g gulp
+  - npm install -g gulp grunt-cli
 script:
   - gulp
-deploy:
-  provider: s3
-  access_key_id: AKIAJ3MROIPIGKQSZUYQ
-  secret_access_key:
-    secure: LnoYxgZM5MFm1NcIHtQmaF7zBvzwzZlkhTJX1a6JReFTUgviAR7bdpEK+ZeFVQB1AqdSFu5CbwCf/vSqX2JRW5B+njXrMPkpGa/jYLklggmmfGJrjQBnk6ucRzBVwj867svZvZfFXAoc/3mCqow/0g2K1kbnllxbBO4n4nnLhd4=
-  bucket: arkitektmn
-  skip_cleanup: true
-  gzip: true
-  max_age:
-      "img/*": 6000
-      "*": 300
-  local-dir: dist
-  on:
-    repo: jvdamgaard/arkitektmn
-    branch: master
+  - grunt deploy

@@ -27,6 +27,10 @@
         "gulp-sass": "0.7.1",
         "gulp-load-plugins": "0.4.0",
         "gulp-concat": "2.2.0",
-        "gulp-gzip": "0.0.5"
+        "grunt": "0.4.4",
+        "grunt-responsive-images": "0.1.1",
+        "load-grunt-tasks": "0.4.0",
+        "grunt-contrib-imagemin": "0.6.1",
+        "grunt-aws": "0.3.0"
     }
 }

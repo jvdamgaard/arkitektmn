@@ -1,58 +1,58 @@
 /* Frontpage */
 .frontpage--slide1 {
-    background-image: url(/img/frontpage/section-1-400x267.jpg);
+    background-image: url(/img/frontpage/section-1-xs.jpg);
 }
 .frontpage--slide2 {
-    background-image: url(/img/frontpage/section-2-400x267.jpg);
+    background-image: url(/img/frontpage/section-2-xs.jpg);
 }
 .frontpage--slide3 {
-    background-image: url(/img/frontpage/section-3-400x267.jpg);
+    background-image: url(/img/frontpage/section-3-xs.jpg);
 }
 
-@media all and (min-width: 600px), all and (min-height: 401px) {
+@media all and (min-width: 600px), all and (min-height: 400px) {
     .frontpage--slide1 {
-        background-image: url(/img/frontpage/section-1-600x401.jpg);
+        background-image: url(/img/frontpage/section-1-s.jpg);
     }
     .frontpage--slide2 {
-        background-image: url(/img/frontpage/section-2-600x401.jpg);
+        background-image: url(/img/frontpage/section-2-s.jpg);
     }
     .frontpage--slide3 {
-        background-image: url(/img/frontpage/section-3-600x401.jpg);
+        background-image: url(/img/frontpage/section-3-s.jpg);
     }
 }
 
 @media all and (min-width: 800px), all and (min-height: 534px) {
     .frontpage--slide1 {
-        background-image: url(/img/frontpage/section-1-800x534.jpg);
+        background-image: url(/img/frontpage/section-1-m.jpg);
     }
     .frontpage--slide2 {
-        background-image: url(/img/frontpage/section-2-800x534.jpg);
+        background-image: url(/img/frontpage/section-2-m.jpg);
     }
     .frontpage--slide3 {
-        background-image: url(/img/frontpage/section-3-800x534.jpg);
+        background-image: url(/img/frontpage/section-3-m.jpg);
     }
 }
 
 @media all and (min-width: 1000px), all and (min-height: 667px) {
     .frontpage--slide1 {
-        background-image: url(/img/frontpage/section-1-1000x667.jpg);
+        background-image: url(/img/frontpage/section-1-l.jpg);
     }
     .frontpage--slide2 {
-        background-image: url(/img/frontpage/section-2-1000x667.jpg);
+        background-image: url(/img/frontpage/section-2-l.jpg);
     }
     .frontpage--slide3 {
-        background-image: url(/img/frontpage/section-3-1000x667.jpg);
+        background-image: url(/img/frontpage/section-3-l.jpg);
     }
 }
 
 @media all and (min-width: 1200px), all and (min-height: 800px) {
     .frontpage--slide1 {
-        background-image: url(/img/frontpage/section-1-1200x800.jpg);
+        background-image: url(/img/frontpage/section-1-xl.jpg);
     }
     .frontpage--slide2 {
-        background-image: url(/img/frontpage/section-2-1200x800.jpg);
+        background-image: url(/img/frontpage/section-2-xl.jpg);
     }
     .frontpage--slide3 {
-        background-image: url(/img/frontpage/section-3-1200x800.jpg);
+        background-image: url(/img/frontpage/section-3-xl.jpg);
     }
 }

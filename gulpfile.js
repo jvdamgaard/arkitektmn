@@ -4,16 +4,6 @@ var gulp = require('gulp');
 // Load plugins
 var $ = require('gulp-load-plugins')();
 
-// Compress files
-gulp.task('compress', function() {
-    gulp.src('./dist/**/*')
-        .pipe($.gzip())
-    // .pipe(rename(function(path) {
-    //     path.extname = '';
-    // }))
-    .pipe(gulp.dest('./compressed'));
-});
-
 // Styles
 gulp.task('styles', function() {
     return gulp.src('app/styles/main.scss')
