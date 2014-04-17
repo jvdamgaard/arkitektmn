@@ -4,7 +4,7 @@ node_js:
 env:
   global:
     - secure: "Ish9Fp5LErSmUFw+wwRifHrgJM44daz7OA1M43DdUAGEVI3R4MXFfDSfGMRhpUPh6PEO3ML/PHbhJghlcco3cSVStV2N0HfzLEnAbMbt/6bdTPw5s8i9u4K42KQRg25yt599lX+6xuNLg3eD1EVBHl+WhEjLZ0A099Roc2rqRdc="
-    - secure: "Ab3PTxtKqYFdrYyUIOX1tyxwIm4bcJzEVXW7O8C9r5CCaS78exM/I9tzPcqnKminTWg5RpjIyIEGKkKCJOYx7dnGO1MhUEmCz1P3U3sOyfO/zD1yxIQD09KDVjccXfln/WlCIqE2Q64fxj54otQUF4MIG09C2aIIRhJEyBMgY+M="
+    - secure: "MzIsPEmLszhuMKi0wxI2OjhGvfX/ZYKy/Eq6lOQvodqKcpC2Z0DNvaQiHodjnMJ19t6JrFqrUcPA+fvPc6AlGe5V2+S7clUi98c6bnZJQAlUPjEc3k5k4e2oXPmZvPXAGSV4jApabrLBjGHc2F8/1S/IYaK5XM2pmRGiblZURL8="
 cache:
   directories:
     - node_modules
