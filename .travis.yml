@@ -3,8 +3,8 @@ node_js:
   - 0.10
 env:
   global:
-    - secure: "osMEzHPKIQab+xMiSI6Depjj4k3uvjnrpb6RcuN4zDAC+wrL4DG0yD+VeD1gBXTEXb9yC/IK3dehxoo2B9HQ5Q5FbCBRjrMV7exanxlCFPptHEppYqLelkY536LscmLF4B7LSjJUR+zPqVwguzZWAcnhR/HQtM/Iwbly/q9p/zQ="
-    - secure: "DaXDYCewdEBdmBBHA+8+df6121cY2D9Xzu93Z8VgiSrbtKXe8ytWUwOyW7Y/87TTKOC5UrM3bue7FOdO3ILlFDIvPbC94PoHde4OU0UIk1Bpo/hLyay7HKlZsb+v6wf7qmRaVr6+tLPbh7/QrFZw4i+xg/oCBg2Df6AajXQHnPU="
+    - secure: "Ish9Fp5LErSmUFw+wwRifHrgJM44daz7OA1M43DdUAGEVI3R4MXFfDSfGMRhpUPh6PEO3ML/PHbhJghlcco3cSVStV2N0HfzLEnAbMbt/6bdTPw5s8i9u4K42KQRg25yt599lX+6xuNLg3eD1EVBHl+WhEjLZ0A099Roc2rqRdc="
+    - secure: "Ab3PTxtKqYFdrYyUIOX1tyxwIm4bcJzEVXW7O8C9r5CCaS78exM/I9tzPcqnKminTWg5RpjIyIEGKkKCJOYx7dnGO1MhUEmCz1P3U3sOyfO/zD1yxIQD09KDVjccXfln/WlCIqE2Q64fxj54otQUF4MIG09C2aIIRhJEyBMgY+M="
 cache:
   directories:
     - node_modules

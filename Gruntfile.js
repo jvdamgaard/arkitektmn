@@ -4,16 +4,16 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     // AWS S3
-    var accessKeyId = process.env.AWS_S3_ACCESS_KEY_ID;
-    var secretAccessKey = process.env.AWS_S3_ACCESS_KEY_ID;
+    var awsS3 = {
+        accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_S3_ACCESS_KEY_ID
+    };
 
     // Find local aws s3 deploy keys
     var homePath = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
     var awsConfigPath = homePath + '/Dropbox/Dokumenter/Hjemmesider/aws-s3-keys/arkitektmn.json';
     if (fs.existsSync(awsConfigPath)) {
-        var awsConfig = require(awsConfigPath);
-        accessKeyId = awsConfig.accessKeyId;
-        secretAccessKey = awsConfig.secretAccessKey;
+        awsS3 = require(awsConfigPath);
     }
 
     var config = {
@@ -24,8 +24,8 @@ module.exports = function(grunt) {
         pkg: require('./package.json'),
         s3: {
             options: {
-                accessKeyId: accessKeyId,
-                secretAccessKey: secretAccessKey,
+                accessKeyId: new Buffer(awsS3.accessKeyId, 'base64').toString('ascii'),
+                secretAccessKey: new Buffer(awsS3.secretAccessKey, 'base64').toString('ascii'),
                 bucket: 'arkitektmn',
                 headers: {
                     CacheControl: new Date().getTime() + 1000 * 60 * 60 * 24,
