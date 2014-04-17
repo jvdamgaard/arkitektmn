@@ -11,5 +11,4 @@ cache:
 before_install:
   - npm install -g gulp grunt-cli
 script:
-  - gulp
-  - grunt deploy
+  - "gulp && grunt deploy"
