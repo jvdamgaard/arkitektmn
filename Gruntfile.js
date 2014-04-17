@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     // AWS S3
     var awsS3 = {
         accessKeyId: process.env.AWS_S3_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_S3_ACCESS_KEY_ID
+        secretAccessKey: process.env.AWS_S3_SECRET_ACCESS_KEY
     };
 
     // Find local aws s3 deploy keys
