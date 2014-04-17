@@ -105,8 +105,7 @@ module.exports = function(grunt) {
                         quality: 50
                     }],
                     aspectRatio: false,
-                    upscale: true,
-                    engine: 'im'
+                    upscale: true
                 },
                 files: [{
                     expand: true,
