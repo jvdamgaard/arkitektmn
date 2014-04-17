@@ -10,7 +10,5 @@ cache:
     - node_modules
 before_install:
   - npm install -g gulp
-  - brew update
-  - brew install GraphicsMagick
 script:
   - gulp deploy
