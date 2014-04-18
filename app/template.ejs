@@ -30,8 +30,16 @@
         <div class="email__background"></div>
     </a>
 
-    <% _.forEach(slides, function(slide, i) { %>
-        <div class="section <%= slide.class %><% if (i >=2) { %> no-load<% } %>"></div>
+    <% _.forEach(sections, function(section, i) { %>
+        <% if (section.slides) { %>
+            <div class="section">
+                <% _.forEach(section.slides, function(slide, j) { %>
+                    <div class="slide <%= slide.class %><% if (j >=2) { %> no-load<% } %>"></div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <div class="section <%= section.class %><% if (i >=2) { %> no-load<% } %>"></div>
+        <% } %>
     <% }); %>
 
     <script src="/js/main.js"></script>
