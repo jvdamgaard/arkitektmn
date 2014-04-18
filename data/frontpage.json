@@ -3,13 +3,13 @@
         "class": "frontpage--slide1"
     }, {
         "slides": [{
+            "class": "frontpage--slide1"
+        }, {
             "class": "frontpage--slide2"
         }, {
             "class": "frontpage--slide3"
-        }, {
-            "class": "frontpage--slide1"
         }]
     }, {
-        "class": "frontpage--slide3"
+        "class": "frontpage--slide2"
     }]
 }

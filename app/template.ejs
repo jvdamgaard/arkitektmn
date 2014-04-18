@@ -34,7 +34,7 @@
         <% if (section.slides) { %>
             <div class="section">
                 <% _.forEach(section.slides, function(slide, j) { %>
-                    <div class="slide <%= slide.class %><% if (j >=2) { %> no-load<% } %>"></div>
+                    <div class="slide <%= slide.class %><% if (i >= 2 || i === 1 && j > 0 || i === 0 && j > 1) { %> no-load<% } %>"></div>
                 <% }); %>
             </div>
         <% } else { %>

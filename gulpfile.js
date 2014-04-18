@@ -14,6 +14,14 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('dist/styles'));
 });
 
+// Styles
+gulp.task('styles-local', function() {
+    return gulp.src('app/styles/main.scss')
+        .pipe($.sass())
+        .pipe($.autoprefixer('last 2 versions', '> 1%', 'ie 8'))
+        .pipe(gulp.dest('dist/styles'));
+});
+
 // Scripts
 gulp.task('scripts', function() {
     return gulp.src([
@@ -26,14 +34,25 @@ gulp.task('scripts', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
+// Scripts
+gulp.task('scripts-local', function() {
+    return gulp.src([
+        './app/js/vendor/jquery.min.js',
+        './app/js/vendor/jquery.fullPage.min.js',
+        './app/js/main.js'
+    ])
+        .pipe($.concat('main.js'))
+        .pipe(gulp.dest('dist/js'));
+});
+
 // Copy
 gulp.task('copy', function() {
     return gulp.src([
         'app/**/*.*',
-        '!*.js',
-        '!*.scss',
-        '!*.jpg',
-        '!*.ejs'
+        '!**/*.js',
+        '!**/*.scss',
+        '!**/*.jpg',
+        '!**/*.ejs'
     ])
         .pipe(gulp.dest('dist'));
 });
@@ -57,8 +76,11 @@ gulp.task('clean', function() {
         .pipe($.clean());
 });
 
+// Local
+gulp.task('local', ['styles-local', 'scripts-local', 'copy', 'grunt-build', 'templates']);
+
 // Build
-gulp.task('build', ['styles', 'scripts', 'copy', 'grunt-build']);
+gulp.task('build', ['styles', 'scripts', 'copy', 'grunt-build', 'templates']);
 
 // Clean and build
 gulp.task('rebuild', ['clean'], function() {
