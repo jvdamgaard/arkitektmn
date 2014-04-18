@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var templateData = require('./data/frontpage');
 
 // Load plugins
 var $ = require('gulp-load-plugins')();
@@ -29,10 +30,19 @@ gulp.task('scripts', function() {
 gulp.task('copy', function() {
     return gulp.src([
         'app/**/*.*',
-        '!app/js/**/*.*',
-        '!app/styles/**/*.*',
-        '!app/img/**/*.*'
+        '!*.js',
+        '!*.scss',
+        '!*.jpg',
+        '!*.ejs'
     ])
+        .pipe(gulp.dest('dist'));
+});
+
+// Create static html from templates
+gulp.task('templates', function() {
+    return gulp.src('./app/template.ejs')
+        .pipe($.template(templateData))
+        .pipe($.rename('index.html'))
         .pipe(gulp.dest('dist'));
 });
 
