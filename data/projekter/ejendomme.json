@@ -1,0 +1,45 @@
+{
+    "sections": [{
+        "slides": [{
+            "class": "projekter__ejendomme__baekkelundsvej--slide1"
+        }, {
+            "class": "projekter__ejendomme__baekkelundsvej--slide2"
+        }]
+    }, {
+        "slides": [{
+            "class": "projekter__ejendomme__ivar-huit--slide1"
+        }, {
+            "class": "projekter__ejendomme__ivar-huit--slide2"
+        }, {
+            "class": "projekter__ejendomme__ivar-huit--slide3"
+        }]
+    }, {
+        "slides": [{
+            "class": "projekter__ejendomme__skovbo--slide1"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide2"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide3"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide4"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide5"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide6"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide7"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide8"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide9"
+        }, {
+            "class": "projekter__ejendomme__skovbo--slide10"
+        }]
+    }, {
+        "slides": [{
+            "class": "projekter__ejendomme__vesterbrogade--slide1"
+        }, {
+            "class": "projekter__ejendomme__vesterbrogade--slide2"
+        }]
+    }]
+}
