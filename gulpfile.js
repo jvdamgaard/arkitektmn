@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var templateDatas = [{
     data: require('./data/frontpage'),
     dist: 'index.html'
+}, {
+    data: require('./data/projekter/ejendomme'),
+    dist: 'projekter/ejendomme/index.html'
 }];
 
 // Load plugins
@@ -82,7 +85,8 @@ gulp.task('clean', function() {
 });
 
 // Local
-gulp.task('local', ['styles-local', 'scripts-local', 'copy', 'grunt-build', 'templates']);
+gulp.task('assets', ['styles-local', 'scripts-local', 'copy', 'templates']);
+gulp.task('images', ['grunt-build']);
 
 // Build
 gulp.task('build', ['styles', 'scripts', 'copy', 'grunt-build', 'templates']);
