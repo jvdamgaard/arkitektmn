@@ -120,6 +120,4 @@ gulp.task('rebuild', ['clean'], function() {
 });
 
 // Clean, build and deploy
-gulp.task('deploy', ['rebuild'], function() {
-    gulp.start('grunt-s3');
-});
+gulp.task('deploy', ['grunt-s3']);
