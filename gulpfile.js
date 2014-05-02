@@ -5,6 +5,9 @@ var templateDatas = [{
 }, {
     data: require('./data/projekter/ejendomme'),
     dist: 'projekter/ejendomme/index.html'
+}, {
+    data: require('./data/projekter/erhverv'),
+    dist: 'projekter/erhverv/index.html'
 }];
 
 // Load plugins
