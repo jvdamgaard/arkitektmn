@@ -1,0 +1,114 @@
+{
+    "sections": [{
+        "slides": [{
+            "class": "projekter__laeger__grejs--slide1"
+        }, {
+            "class": "projekter__laeger__grejs--slide2"
+        }, {
+            "class": "projekter__laeger__grejs--slide3"
+        }, {
+            "class": "projekter__laeger__grejs--slide4"
+        }, {
+            "class": "projekter__laeger__grejs--slide5"
+        }, {
+            "class": "projekter__laeger__grejs--slide6"
+        }],
+        "body": "<h1>Grejs</h1><p>En beskrivelse...</p>"
+    }, {
+        "class": "projekter__laeger__grenaavej--slide1",
+        "body": "<h1>Grenåvej</h1><p>En beskrivelse...</p>"
+    }, {
+        "class": "projekter__laeger__kolding--slide1",
+        "body": "<h1>Kolding</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__kolt--slide1"
+        }, {
+            "class": "projekter__laeger__kolt--slide2"
+        }, {
+            "class": "projekter__laeger__kolt--slide3"
+        }, {
+            "class": "projekter__laeger__kolt--slide4"
+        }],
+        "body": "<h1>Kolt</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__maarslet--slide1"
+        }, {
+            "class": "projekter__laeger__maarslet--slide2"
+        }, {
+            "class": "projekter__laeger__maarslet--slide3"
+        }, {
+            "class": "projekter__laeger__maarslet--slide4"
+        }, {
+            "class": "projekter__laeger__maarslet--slide5"
+        }],
+        "body": "<h1>Mårslet</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__sct-oluf--slide1"
+        }, {
+            "class": "projekter__laeger__sct-oluf--slide2"
+        }, {
+            "class": "projekter__laeger__sct-oluf--slide3"
+        }],
+        "body": "<h1>Sct. Oluf</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__solbjerg--slide1"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide2"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide3"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide4"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide5"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide6"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide7"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide8"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide9"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide10"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide11"
+        }, {
+            "class": "projekter__laeger__solbjerg--slide12"
+        }],
+        "body": "<h1>Solbjerg</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__tandlaege-maarslet--slide1"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide2"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide3"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide4"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide5"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide6"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide7"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide8"
+        }, {
+            "class": "projekter__laeger__tandlaege-maarslet--slide9"
+        }],
+        "body": "<h1>Tandlæge Mårslet</h1><p>En beskrivelse...</p>"
+    }, {
+        "slides": [{
+            "class": "projekter__laeger__toender--slide1"
+        }, {
+            "class": "projekter__laeger__toender--slide2"
+        }, {
+            "class": "projekter__laeger__toender--slide3"
+        }],
+        "body": "<h1>Tønder</h1><p>En beskrivelse...</p>"
+    }]
+}

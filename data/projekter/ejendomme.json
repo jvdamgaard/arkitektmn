@@ -4,7 +4,8 @@
             "class": "projekter__ejendomme__baekkelundsvej--slide1"
         }, {
             "class": "projekter__ejendomme__baekkelundsvej--slide2"
-        }]
+        }],
+        "body": "<h1>Bækkelundsvej</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__ejendomme__ivar-huit--slide1"
@@ -12,7 +13,8 @@
             "class": "projekter__ejendomme__ivar-huit--slide2"
         }, {
             "class": "projekter__ejendomme__ivar-huit--slide3"
-        }]
+        }],
+        "body": "<h1>Ivar Huit</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__ejendomme__skovbo--slide1"
@@ -34,12 +36,14 @@
             "class": "projekter__ejendomme__skovbo--slide9"
         }, {
             "class": "projekter__ejendomme__skovbo--slide10"
-        }]
+        }],
+        "body": "<h1>Skovbo</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__ejendomme__vesterbrogade--slide1"
         }, {
             "class": "projekter__ejendomme__vesterbrogade--slide2"
-        }]
+        }],
+        "body": "<h1>Vesterbrogade</h1><p>En beskrivelse...</p>"
     }]
 }

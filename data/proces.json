@@ -1,0 +1,10 @@
+{
+    "sections": [{
+        "slides": [{
+            "class": "frontpage--slide3"
+        }, {
+            "class": "frontpage--slide2"
+        }],
+        "body": "<h1>Proces</h1><p>En beskrivelse...</p>"
+    }]
+}

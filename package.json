@@ -1,39 +1,41 @@
 {
-    "name": "arkitektmn",
-    "version": "0.0.0",
-    "description": "Arkitekttegnestuen Merete Nielsen website",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jvdamgaard/arkitektmn.git"
-    },
-    "author": "Jakob Viskum Damgaard <jakob.viskum.damgaardgmail.com>",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/jvdamgaard/arkitektmn/issues"
-    },
-    "homepage": "https://github.com/jvdamgaard/arkitektmn",
-    "devDependencies": {
-        "open": "0.0.4",
-        "gulp-clean": "0.2.4",
-        "gulp-useref": "0.3.0",
-        "gulp-filter": "0.3.1",
-        "gulp-util": "2.2.14",
-        "gulp-uglify": "0.2.1",
-        "gulp-autoprefixer": "0.0.6",
-        "gulp": "3.6.0",
-        "gulp-connect": "1.1.0",
-        "gulp-csso": "0.2.6",
-        "gulp-sass": "0.7.1",
-        "gulp-load-plugins": "0.4.0",
-        "gulp-concat": "2.2.0",
-        "grunt": "0.4.4",
-        "grunt-responsive-images": "0.1.1",
-        "load-grunt-tasks": "0.4.0",
-        "grunt-contrib-imagemin": "0.6.1",
-        "grunt-aws": "0.3.0",
-        "gulp-grunt": "0.4.1",
-        "gulp-template": "0.1.1",
-        "gulp-rename": "1.2.0"
-    }
+  "name": "arkitektmn",
+  "version": "0.0.0",
+  "description": "Arkitekttegnestuen Merete Nielsen website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jvdamgaard/arkitektmn.git"
+  },
+  "author": "Jakob Viskum Damgaard <jakob.viskum.damgaardgmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvdamgaard/arkitektmn/issues"
+  },
+  "homepage": "https://github.com/jvdamgaard/arkitektmn",
+  "devDependencies": {
+    "open": "0.0.4",
+    "gulp-clean": "0.2.4",
+    "gulp-useref": "0.3.0",
+    "gulp-filter": "0.3.1",
+    "gulp-util": "2.2.14",
+    "gulp-uglify": "0.2.1",
+    "gulp-autoprefixer": "0.0.6",
+    "gulp": "3.6.0",
+    "gulp-connect": "1.1.0",
+    "gulp-csso": "0.2.6",
+    "gulp-sass": "0.7.1",
+    "gulp-load-plugins": "0.4.0",
+    "gulp-concat": "2.2.0",
+    "grunt": "0.4.4",
+    "grunt-responsive-images": "0.1.1",
+    "load-grunt-tasks": "0.4.0",
+    "grunt-contrib-imagemin": "0.6.1",
+    "grunt-aws": "0.3.0",
+    "gulp-grunt": "0.4.1",
+    "gulp-template": "0.1.1",
+    "gulp-rename": "1.2.0",
+    "grunt-newer-explicit": "~0.9.3",
+    "grunt-concurrent": "~0.5.0"
+  }
 }

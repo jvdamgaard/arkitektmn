@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             }
         },
         responsive_images: {
-            images: {
+            'portrait-x-small': {
                 options: {
                     sizes: [{
                         name: 'portrait-x-small',
@@ -59,43 +59,120 @@ module.exports = function(grunt) {
                         height: 480,
                         quality: 85,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'portrait-small': {
+                options: {
+                    sizes: [{
                         name: 'portrait-small',
                         width: 768,
                         height: 1136,
                         quality: 75,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'portrait-x-large': {
+                options: {
+                    sizes: [{
                         name: 'portrait-x-large',
                         width: 1536,
                         height: 2048,
                         quality: 60,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'landscape-x-small': {
+                options: {
+                    sizes: [{
                         name: 'landscape-x-small',
                         width: 480,
                         height: 320,
                         quality: 85,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'landscape-small': {
+                options: {
+                    sizes: [{
                         name: 'landscape-small',
                         width: 1136,
                         height: 768,
                         quality: 75,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'landscape-medium': {
+                options: {
+                    sizes: [{
                         name: 'landscape-medium',
                         width: 1366,
                         height: 1024,
                         quality: 75,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'landscape-large': {
+                options: {
+                    sizes: [{
                         name: 'landscape-large',
                         width: 1920,
                         height: 1200,
                         quality: 60,
                         aspectRatio: false
-                    }, {
+                    }]
+                },
+                files: [{
+                    expand: true,
+                    src: ['**/*.{jpg,gif,png}'],
+                    cwd: 'app/img/',
+                    dest: '.tmp/img/'
+                }]
+            },
+            'landscape-x-large': {
+                options: {
+                    sizes: [{
                         name: 'landscape-x-large',
                         width: 2048,
                         height: 1536,
@@ -110,13 +187,27 @@ module.exports = function(grunt) {
                     dest: '.tmp/img/'
                 }]
             }
+        },
+        concurrent: {
+            respImg: [
+                'responsive_images:portrait-x-small',
+                'responsive_images:portrait-small',
+                'responsive_images:portrait-x-large',
+                'responsive_images:landscape-x-small',
+                'responsive_images:landscape-medium',
+                'responsive_images:landscape-large',
+                'responsive_images:landscape-x-large',
+            ],
+            options: {
+                limit: 8
+            }
         }
     };
 
     grunt.initConfig(config);
 
     grunt.registerTask('build', [
-        'responsive_images',
+        'concurrent:respImg',
         'imagemin'
     ]);
 };

@@ -26,3 +26,12 @@
 .email:hover .email__background {
     background-color: rgba(255,236,10,1);
 }
+
+@media all and (max-width: 400px) {
+    .email {
+        bottom: -3%;
+    }
+    .email__background {
+        top: 0%;
+    }
+}

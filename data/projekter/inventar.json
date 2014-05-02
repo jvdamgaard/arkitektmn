@@ -1,0 +1,32 @@
+{
+    "sections": [{
+        "slides": [{
+            "class": "projekter__inventar--slide1"
+        }, {
+            "class": "projekter__inventar--slide2"
+        }, {
+            "class": "projekter__inventar--slide3"
+        }, {
+            "class": "projekter__inventar--slide4"
+        }, {
+            "class": "projekter__inventar--slide5"
+        }, {
+            "class": "projekter__inventar--slide6"
+        }, {
+            "class": "projekter__inventar--slide7"
+        }, {
+            "class": "projekter__inventar--slide8"
+        }, {
+            "class": "projekter__inventar--slide9"
+        }, {
+            "class": "projekter__inventar--slide10"
+        }, {
+            "class": "projekter__inventar--slide11"
+        }, {
+            "class": "projekter__inventar--slide12"
+        }, {
+            "class": "projekter__inventar--slide13"
+        }],
+        "body": "<h1>Inventar</h1><p>En beskrivelse...</p>"
+    }]
+}

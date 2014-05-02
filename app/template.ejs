@@ -17,15 +17,15 @@
 
     <div class="menu">
         <ul>
-            <li><a href="/projekter.html">Projekter</a></li>
-            <li><a href="/proces.html">Proces</a></li>
-            <li><a href="/profil.html">Profil</a></li>
-            <li><a href="/om.html">Om</a></li>
+            <li><a href="/projekter/">Projekter</a></li>
+            <li><a href="/proces/">Proces</a></li>
+            <li><a href="/profil/">Profil</a></li>
+            <li><a href="/om/">Om</a></li>
         </ul>
         <div class="background menu__background"></div>
     </div>
 
-    <a class="email">
+    <a class="email" href="mailto:mn@arkitektmn.dk">
         Send e-mail
         <div class="email__background"></div>
     </a>
@@ -33,12 +33,25 @@
     <% _.forEach(sections, function(section, i) { %>
         <% if (section.slides) { %>
             <div class="section">
+                <% if (section.body) { %>
+                    <div class="section__body">
+                        <%= section.body %>
+                        <div class="background section__body__background"></div>
+                    </div>
+                <% } %>
                 <% _.forEach(section.slides, function(slide, j) { %>
                     <div class="slide <%= slide.class %><% if (i >= 2 || i === 1 && j > 0 || i === 0 && j > 1) { %> no-load<% } %>"></div>
                 <% }); %>
             </div>
         <% } else { %>
-            <div class="section <%= section.class %><% if (i >=2) { %> no-load<% } %>"></div>
+            <div class="section <%= section.class %><% if (i >=2) { %> no-load<% } %>">
+                <% if (section.body) { %>
+                    <div class="section__body">
+                        <%= section.body %>
+                        <div class="background section__body__background"></div>
+                    </div>
+                <% } %>
+            </div>
         <% } %>
     <% }); %>
 

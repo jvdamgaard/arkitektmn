@@ -4,7 +4,8 @@
             "class": "projekter__erhverv__cett--slide1"
         }, {
             "class": "projekter__erhverv__cett--slide2"
-        }]
+        }],
+        "body": "<h1>Cett</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__erhverv__clemenslaw--slide1"
@@ -28,7 +29,8 @@
             "class": "projekter__erhverv__clemenslaw--slide10"
         }, {
             "class": "projekter__erhverv__clemenslaw--slide11"
-        }]
+        }],
+        "body": "<h1>Clemenslaw</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__erhverv__kosan-chrisplant--slide1"
@@ -56,7 +58,8 @@
             "class": "projekter__erhverv__kosan-chrisplant--slide12"
         }, {
             "class": "projekter__erhverv__kosan-chrisplant--slide13"
-        }]
+        }],
+        "body": "<h1>Kosan Chrisplant</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__erhverv__prodesign--slide1"
@@ -68,12 +71,14 @@
             "class": "projekter__erhverv__prodesign--slide4"
         }, {
             "class": "projekter__erhverv__prodesign--slide5"
-        }]
+        }],
+        "body": "<h1>Prodesign</h1><p>En beskrivelse...</p>"
     }, {
         "slides": [{
             "class": "projekter__erhverv__ry--slide1"
         }, {
             "class": "projekter__erhverv__ry--slide2"
-        }]
+        }],
+        "body": "<h1>Ry</h1><p>En beskrivelse...</p>"
     }]
 }

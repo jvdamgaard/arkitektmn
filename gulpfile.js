@@ -3,11 +3,32 @@ var templateDatas = [{
     data: require('./data/frontpage'),
     dist: 'index.html'
 }, {
+    data: require('./data/projekter'),
+    dist: 'projekter/index.html'
+}, {
     data: require('./data/projekter/ejendomme'),
     dist: 'projekter/ejendomme/index.html'
 }, {
     data: require('./data/projekter/erhverv'),
     dist: 'projekter/erhverv/index.html'
+}, {
+    data: require('./data/projekter/inventar'),
+    dist: 'projekter/inventar/index.html'
+}, {
+    data: require('./data/projekter/laeger'),
+    dist: 'projekter/laeger/index.html'
+}, {
+    data: require('./data/projekter/privat'),
+    dist: 'projekter/privat/index.html'
+}, {
+    data: require('./data/proces'),
+    dist: 'proces/index.html'
+}, {
+    data: require('./data/profil'),
+    dist: 'profil/index.html'
+}, {
+    data: require('./data/om'),
+    dist: 'om/index.html'
 }];
 
 // Load plugins
@@ -79,8 +100,7 @@ gulp.task('templates', function() {
 // Clean
 gulp.task('clean', function() {
     return gulp.src([
-        'dist',
-        '.tmp'
+        'dist'
     ], {
         read: false
     })

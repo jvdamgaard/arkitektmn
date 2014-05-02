@@ -1,0 +1,6 @@
+{
+    "sections": [{
+        "class": "frontpage--slide2",
+        "body": "<h1>Projekter</h1><p><a href='/projekter/ejendomme'>Ejendomme</a> En beskrivelse...</p><p><a href='/projekter/erhverv'>Erhverv</a> En beskrivelse...</p><p><a href='/projekter/inventar'>Inventar</a> En beskrivelse...</p><p><a href='/projekter/laeger'>Læger</a> En beskrivelse...</p><p><a href='/projekter/privat'>Privat</a> En beskrivelse...</p>"
+    }]
+}
