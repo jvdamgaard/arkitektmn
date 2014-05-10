@@ -17,3 +17,6 @@ a {
 a:hover {
     background-color: #ffec0a;
 }
+a.no-hover-effect:hover {
+    background: none;
+}
